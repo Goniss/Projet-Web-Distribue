@@ -1,0 +1,18 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: Micro-service-Client
+  datasource:
+    driverClassName: org.h2.Driver
+    password: ''
+    url: jdbc:h2:mem:clients
+    username: sa
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true

@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Reservation-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: Reservation
+  template:
+    metadata:
+      labels:
+        app: Reservation
+    spec:
+      containers:
+      - name: Reservation
+        image: efrei/Reservation:1

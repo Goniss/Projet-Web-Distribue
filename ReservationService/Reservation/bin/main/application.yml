@@ -1,0 +1,18 @@
+server:
+  port: 8181
+spring:
+  application:
+    name: Micro-service-Reservation
+  datasource:
+    driverClassName: org.h2.Driver
+    password: ''
+    URL: jdbc:h2:mem:reservations
+    username: sa
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  JPA:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-SQL: true

@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: registre-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: Registre
+  template:
+    metadata:
+      labels:
+        app: Registre
+    spec:
+      containers:
+      - name: registre
+        image: efrei/registre:1
